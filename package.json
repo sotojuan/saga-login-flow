@@ -21,7 +21,7 @@
   "homepage": "https://github.com/sotojuan/saga-login-flow#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
-    "ava": "^0.15.1",
+    "ava": "^0.16.0",
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
