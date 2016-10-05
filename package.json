@@ -55,7 +55,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.5.1",
     "redux": "^3.5.1",
-    "redux-ava": "^2.0.0",
+    "redux-ava": "^2.1.0",
     "redux-logger": "^2.6.1",
     "redux-saga": "^0.12.0"
   },
