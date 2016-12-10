@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "babel-polyfill": "6.20.0",
-    "bcryptjs": "2.3.0",
+    "bcryptjs": "2.4.0",
     "btoa": "1.1.2",
     "react": "15.4.1",
     "react-dom": "15.4.1",
