@@ -35,7 +35,7 @@
     "localStorage": "1.0.3",
     "postcss-focus": "1.0.0",
     "postcss-import": "9.0.0",
-    "postcss-loader": "1.2.0",
+    "postcss-loader": "1.2.1",
     "postcss-reporter": "2.0.0",
     "postcss-simple-vars": "3.0.0",
     "redux-ava": "2.2.0",
