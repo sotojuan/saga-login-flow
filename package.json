@@ -22,7 +22,7 @@
   "devDependencies": {
     "autoprefixer": "6.5.4",
     "ava": "0.17.0",
-    "babel-core": "6.20.0",
+    "babel-core": "6.21.0",
     "babel-loader": "6.2.9",
     "babel-plugin-transform-object-rest-spread": "6.20.2",
     "babel-plugin-transform-runtime": "6.15.0",
