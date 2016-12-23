@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/sotojuan/saga-login-flow#readme",
   "devDependencies": {
-    "autoprefixer": "6.5.4",
+    "autoprefixer": "6.6.0",
     "ava": "0.17.0",
     "babel-core": "6.21.0",
     "babel-loader": "6.2.9",
