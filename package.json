@@ -31,7 +31,7 @@
     "babel-register": "6.18.0",
     "babel-runtime": "6.20.0",
     "css-loader": "0.26.1",
-    "html-webpack-plugin": "2.25.0",
+    "html-webpack-plugin": "2.26.0",
     "localStorage": "1.0.3",
     "postcss-focus": "1.0.0",
     "postcss-import": "9.0.0",
