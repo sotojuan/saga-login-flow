@@ -51,7 +51,7 @@
     "bcryptjs": "2.4.0",
     "btoa": "1.1.2",
     "react": "15.4.1",
-    "react-dom": "15.4.1",
+    "react-dom": "15.4.2",
     "react-redux": "4.4.6",
     "react-router": "2.5.1",
     "redux": "3.6.0",
