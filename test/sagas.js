@@ -38,32 +38,6 @@ test('loginFlow saga with success', t => {
   )
 })
 
-test('loginFlow saga with logout as race winner', t => {
-  let gen = loginFlow()
-  let loginRace = race(raceObject)
-  let logOutWinner = {logout: true}
-
-  t.deepEqual(
-    gen.next().value,
-    take(constants.LOGIN_REQUEST)
-  )
-
-  t.deepEqual(
-    gen.next(data).value,
-    loginRace
-  )
-
-  t.deepEqual(
-    gen.next(logOutWinner).value,
-    put(actions.setAuthState(false))
-  )
-
-  t.deepEqual(
-    gen.next().value,
-    call(logout)
-  )
-})
-
 test('logoutFlow saga', t => {
   let gen = logoutFlow()
 
