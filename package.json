@@ -47,16 +47,16 @@
     "webpack-dev-server": "1.16.2"
   },
   "dependencies": {
-    "babel-polyfill": "6.20.0",
-    "bcryptjs": "2.4.0",
+    "babel-polyfill": "^6.23.0",
+    "bcryptjs": "^2.4.3",
     "btoa": "1.1.2",
-    "react": "15.4.1",
-    "react-dom": "15.4.1",
-    "react-redux": "4.4.6",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
     "react-router": "2.5.1",
     "redux": "3.6.0",
-    "redux-logger": "2.7.4",
-    "redux-saga": "0.14.2"
+    "redux-logger": "^3.0.1",
+    "redux-saga": "^0.14.5"
   },
   "babel": {
     "presets": [
