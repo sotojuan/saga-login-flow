@@ -100,7 +100,7 @@ let server = {
  * @param  {string} username The username that should be checked
  */
   doesUserExist (username) {
-    return !(users[username] === undefined)
+    return !(username in users)
   }
 }
 
