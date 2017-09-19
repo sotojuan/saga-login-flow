@@ -1,8 +1,8 @@
 'use strict'
 
-let path = require('path')
-let webpack = require('webpack')
-let HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 function makeWebpackConfig (options) {
   let entry, plugins, devtool

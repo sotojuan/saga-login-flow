@@ -5,8 +5,8 @@ import {hashSync} from 'bcryptjs'
 import genSalt from '../../app/auth/salt'
 
 test('returns true on correct login', t => {
-  let salt = genSalt('juan')
-  let hash = hashSync('password', salt)
+  const salt = genSalt('juan')
+  const hash = hashSync('password', salt)
 
   return auth.login('juan', hash)
     .then(response => {
@@ -23,8 +23,8 @@ test('returns error on inexistent user', t => {
 })
 
 test('stays logged in until log out', t => {
-  let salt = genSalt('juan')
-  let hash = hashSync('password', salt)
+  const salt = genSalt('juan')
+  const hash = hashSync('password', salt)
 
   return auth.login('juan', hash)
     .then(() => {

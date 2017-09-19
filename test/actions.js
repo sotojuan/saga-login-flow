@@ -11,12 +11,12 @@ import {
   clearError
 } from '../app/actions'
 
-let formState = {
+const formState = {
   username: 'juan',
   password: 'password'
 }
 
-let error = 'Wrong password'
+const error = 'Wrong password'
 
 test('changeForm action',
   actionTest(changeForm, formState, {type: 'CHANGE_FORM', newFormState: formState}))
