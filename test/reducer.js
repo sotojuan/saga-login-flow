@@ -9,7 +9,7 @@ import {
 } from '../app/actions'
 import app from '../app/reducers'
 
-let stateBefore = {
+const stateBefore = {
   formState: {
     username: '',
     password: ''

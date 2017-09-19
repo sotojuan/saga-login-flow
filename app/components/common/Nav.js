@@ -12,7 +12,7 @@ class Nav extends Component {
   }
 
   render () {
-    let navButtons = this.props.loggedIn ? (
+    const navButtons = this.props.loggedIn ? (
       <div>
         <Link to='/dashboard' className='btn btn--dash btn--nav'>Dashboard</Link>
         {this.props.currentlySending ? (

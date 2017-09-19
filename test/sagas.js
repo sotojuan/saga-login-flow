@@ -4,18 +4,18 @@ import * as constants from '../app/actions/constants'
 import * as actions from '../app/actions'
 import {logoutFlow, registerFlow, loginFlow, authorize, logout} from '../app/sagas'
 
-let user = {username: 'juan', password: 'password'}
-let data = {data: user}
-let blankForm = {username: '', password: ''}
-let raceObject = {
+const user = {username: 'juan', password: 'password'}
+const data = {data: user}
+const blankForm = {username: '', password: ''}
+const raceObject = {
   auth: call(authorize, {...user, isRegistering: false}),
   logout: take(constants.LOGOUT)
 }
 
 test('loginFlow saga with success', t => {
-  let gen = loginFlow()
-  let loginRace = race(raceObject)
-  let authWinner = {auth: true}
+  const gen = loginFlow()
+  const loginRace = race(raceObject)
+  const authWinner = {auth: true}
 
   t.deepEqual(
     gen.next().value,
@@ -39,7 +39,7 @@ test('loginFlow saga with success', t => {
 })
 
 test('logoutFlow saga', t => {
-  let gen = logoutFlow()
+  const gen = logoutFlow()
 
   t.deepEqual(
     gen.next().value,
@@ -58,7 +58,7 @@ test('logoutFlow saga', t => {
 })
 
 test('registerFlow saga with success', t => {
-  let gen = registerFlow()
+  const gen = registerFlow()
 
   t.deepEqual(
     gen.next().value,

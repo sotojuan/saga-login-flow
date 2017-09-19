@@ -13,7 +13,7 @@ class Form extends Component {
     this._changePassword = this._changePassword.bind(this)
   }
   render () {
-    let {error} = this.props
+    const {error} = this.props
 
     return (
       <form className='form' onSubmit={this._onSubmit}>

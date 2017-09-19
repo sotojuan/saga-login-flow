@@ -3,7 +3,7 @@ import genSalt from './salt'
 
 let users
 let localStorage
-let salt = genSaltSync(10)
+const salt = genSaltSync(10)
 
 // If we're testing, use a local storage polyfill
 if (global.process && process.env.NODE_ENV === 'test') {
@@ -13,16 +13,16 @@ if (global.process && process.env.NODE_ENV === 'test') {
   localStorage = global.window.localStorage
 }
 
-let server = {
+const server = {
   /**
   * Populates the users, similar to seeding a database in the real world
   */
   init () {
     if (localStorage.users === undefined || !localStorage.encrypted) {
       // Set default user
-      let juan = 'juan'
-      let juanSalt = genSalt(juan)
-      let juanPass = hashSync('password', juanSalt)
+      const juan = 'juan'
+      const juanSalt = genSalt(juan)
+      const juanPass = hashSync('password', juanSalt)
 
       users = {
         [juan]: hashSync(juanPass, salt)
@@ -41,7 +41,7 @@ let server = {
  * @param  {string} password The password of the user
  */
   login (username, password) {
-    let userExists = this.doesUserExist(username)
+    const userExists = this.doesUserExist(username)
 
     return new Promise((resolve, reject) => {
       // If the user exists and the password fits log the user in and resolve

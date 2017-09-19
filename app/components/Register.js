@@ -12,8 +12,8 @@ class Register extends Component {
   }
 
   render () {
-    let {dispatch} = this.props
-    let {formState, currentlySending, error} = this.props.data
+    const {dispatch} = this.props
+    const {formState, currentlySending, error} = this.props.data
 
     return (
       <div className='form-page__wrapper'>

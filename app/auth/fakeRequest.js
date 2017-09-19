@@ -6,7 +6,7 @@ import server from './fakeServer'
 
 server.init()
 
-let fakeRequest = {
+const fakeRequest = {
   /**
   * Pretends to post to a remote server
   * @param  {string}  endpoint The endpoint of the server that should be contacted

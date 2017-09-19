@@ -20,15 +20,15 @@ import Register from './components/Register'
 import Dashboard from './components/Dashboard'
 import NotFound from './components/NotFound'
 
-let logger = createLogger({
+const logger = createLogger({
   // Ignore `CHANGE_FORM` actions in the logger, since they fire after every keystroke
   predicate: (getState, action) => action.type !== 'CHANGE_FORM'
 })
 
-let sagaMiddleware = createSagaMiddleware()
+const sagaMiddleware = createSagaMiddleware()
 
 // Creates the Redux store using our reducer and the logger and saga middlewares
-let store = createStore(reducer, applyMiddleware(logger, sagaMiddleware))
+const store = createStore(reducer, applyMiddleware(logger, sagaMiddleware))
 // We run the root saga automatically
 sagaMiddleware.run(rootSaga)
 
@@ -38,7 +38,7 @@ sagaMiddleware.run(rootSaga)
 * @param  {function} replace Function provided by React Router to replace the location
 */
 function checkAuth (nextState, replace) {
-  let {loggedIn} = store.getState()
+  const {loggedIn} = store.getState()
 
   store.dispatch(clearError())
 
