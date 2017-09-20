@@ -10,7 +10,7 @@ if (global.process && process.env.NODE_ENV === 'test') {
   localStorage = global.window.localStorage
 }
 
-let auth = {
+const auth = {
   /**
   * Logs a user in, returning a promise with `true` when done
   * @param  {string} username The username of the user

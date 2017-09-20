@@ -33,8 +33,8 @@ export function * authorize ({username, password, isRegistering}) {
 
   // We then try to register or log in the user, depending on the request
   try {
-    let salt = genSalt(username)
-    let hash = hashSync(password, salt)
+    const salt = genSalt(username)
+    const hash = hashSync(password, salt)
     let response
 
     // For either log in or registering, we call the proper function in the `auth`
@@ -71,7 +71,7 @@ export function * logout () {
   // `auth` module. If we get an error, we send an appropiate action. If we don't,
   // we return the response.
   try {
-    let response = yield call(auth.logout)
+    const response = yield call(auth.logout)
     yield put({type: SENDING_REQUEST, sending: false})
 
     return response
@@ -88,13 +88,13 @@ export function * loginFlow () {
   // Basically here we say "this saga is always listening for actions"
   while (true) {
     // And we're listening for `LOGIN_REQUEST` actions and destructuring its payload
-    let request = yield take(LOGIN_REQUEST)
-    let {username, password} = request.data
+    const request = yield take(LOGIN_REQUEST)
+    const {username, password} = request.data
 
     // A `LOGOUT` action may happen while the `authorize` effect is going on, which may
     // lead to a race condition. This is unlikely, but just in case, we call `race` which
     // returns the "winner", i.e. the one that finished first
-    let winner = yield race({
+    const winner = yield race({
       auth: call(authorize, {username, password, isRegistering: false}),
       logout: take(LOGOUT)
     })
@@ -131,12 +131,12 @@ export function * logoutFlow () {
 export function * registerFlow () {
   while (true) {
     // We always listen to `REGISTER_REQUEST` actions
-    let request = yield take(REGISTER_REQUEST)
-    let {username, password} = request.data
+    const request = yield take(REGISTER_REQUEST)
+    const {username, password} = request.data
 
     // We call the `authorize` task with the data, telling it that we are registering a user
     // This returns `true` if the registering was successful, `false` if not
-    let wasSuccessful = yield call(authorize, {username, password, isRegistering: true})
+    const wasSuccessful = yield call(authorize, {username, password, isRegistering: true})
 
     // If we could register a user, we send the appropiate actions
     if (wasSuccessful) {
